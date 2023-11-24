@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Calculator</title>
+  <meta name="description" content="Calculator" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="header-container">
+        <h1 id="toast">Temperature Converter</h1>
+      </div>
+      <div class="firstrow">
+        <input type="text" name="result" id="result"  readonly style="width: 19.7rem;" />
+      </div>
+      <div class="secondrow">
+        <span>
+          <input type="radio" value="celsius"  name="temperature" class="radio" onclick="liveScreen('celsius')" />Celsius
+        </span>
+        <span>
+          <input type="radio" value="fahrenheit"  name="temperature" class="radio" onclick="liveScreen('fahrenheit')" />Fahrenheit
+        </span>
+        <span>
+          <input type="radio" value="kelvin"  name="temperature" class="radio" onclick=" liveScreen('kelvin')" />Kelvin
+        </span>
+      </div>
+      <div class="thirdrow">
+        <div id="output" style="width: 19.7rem; height: 4.3rem;border-radius: 35px;" value=9&#176;></div>
+      </div>
+      <div class="secondrow">
+        <span>
+          <input type="radio" value="celsius"  name="anstemperature" class="radio" onclick="ansScreen('anscelsius')" />Celsius
+        </span>
+        <span>
+          <input type="radio" value="fahrenheit"  name="anstemperature" class="radio" onclick="ansScreen('ansfahrenheit')" />Fahrenheit
+        </span>
+        <span>
+          <input type="radio" value="kelvin"  name="anstemperature" class="radio" onclick=" ansScreen('anskelvin')" />Kelvin
+        </span>
+      </div>
+      <div class="sixthrow">
+        <input type="button" onclick="calculate(result.value)" style="width:14.8rem;" value="Convert"/>
+        <input type="button" value="C" onclick="clearscreen()" id="clear-button" />
+      </div>
+    </div>
+  </div>
+  <script src="script.js">
+  </script>
+</body>
+
+</html>
